@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :message %><br>
+  <div class="form-group">
+    <%= f.label :message, class: "form-control" %>
     <%= f.text_field :message %>
   </div>
-  <div class="field">
+  <div class="form-group invisble">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Tweet!", class: "btn btn-primary" %>
   </div>
 <% end %>
